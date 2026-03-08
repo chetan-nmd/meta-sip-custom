@@ -1,0 +1,41 @@
+This README file contains information on the contents of the meta-sip-custom layer.
+
+Please see the corresponding sections below for details.
+
+Dependencies
+============
+
+This layer depends on the following layers:
+
+  - `meta`
+  - `meta-python`
+
+Ensure that these layers are included in your build environment before adding `meta-sip-custom`.
+
+Patches
+=======
+
+Please submit any patches against the meta-sip-custom layer to the GitHub repository issues or pull requests.
+
+Maintainer: Chetan Dandolu <chetan@novelmicrodevices.com>
+
+Table of Contents
+=================
+
+  I. Adding the meta-sip-custom layer to your build
+ II. SIP 6.8.6 recipe
+
+I. Adding the meta-sip-custom layer to your build
+=================================================
+
+To include the meta-sip-custom layer in your build, add it to your `bblayers.conf` file:
+
+```bash
+bitbake-layers add-layer meta-sip-custom
+```
+II. SIP 6.8.6 recipe
+====================
+
+This layer currently includes the following recipe:
+
+sip_6.8.6.bb: This recipe builds and installs SIP version 6.8.6, which is compatible with the ABI version of PyQt6.6.1. SIP is a tool for creating Python bindings for C and C++ libraries, and this version ensures compatibility with PyQt.
